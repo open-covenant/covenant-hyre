@@ -2,6 +2,8 @@
 
 The integration was verified end-to-end on Solana mainnet on 2026-05-28. Both the inner 402-then-pay loop (`covenant_hyre::execute_paid`) and the daemon path (`covenantd::hyre::DaemonHyreExecutor`) produce wire-compatible output that lands on chain.
 
+**Re-verified 2026-06-17.** After merging the provider profile to `open-covenant/covenant` `main` and bounding the paid HTTP path with a request timeout, the same envelope was re-checked against `facilitator.payai.network/verify` (free, no settle): `isValid: true`, payer `DkhgMfHAMdiCd9jAz1Ahok9d9EjV8kESepbDMeKFU5i3`. No wire-format drift — the transaction below remains the canonical on-chain proof.
+
 ## The transaction
 
 - **Signature:** [`CpXZJtu2M7jevuYZUMAEzC2tSFut2fevmTB6DG7DEyu9iGVt7x23F1wmLv1P5JCjTiajVPrcYf44uX8ByP7x1nP`](https://solscan.io/tx/CpXZJtu2M7jevuYZUMAEzC2tSFut2fevmTB6DG7DEyu9iGVt7x23F1wmLv1P5JCjTiajVPrcYf44uX8ByP7x1nP)

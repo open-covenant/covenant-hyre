@@ -11,6 +11,8 @@ A reference integration showing how a Covenant daemon agent buys a Hyre API call
 
 This repo is a small, self-contained showcase: two runnable examples (bash + Rust), the on-chain proof of a real call, and the wire-format details a third party would need to reproduce.
 
+**Status:** live. The provider profile is merged to [`open-covenant/covenant`](https://github.com/open-covenant/covenant) `main` ([`hyre-x402/v1`](https://github.com/open-covenant/covenant/releases/tag/hyre-x402/v1)), the paid HTTP path is bounded with a request timeout, and the envelope was re-verified against PayAI's facilitator on 2026-06-17 (`/verify` → `isValid: true`). See [`docs/proof.md`](docs/proof.md).
+
 ## How it works
 
 ```
